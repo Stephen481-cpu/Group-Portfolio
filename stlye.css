@@ -1,0 +1,261 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Fira Code", "Courier New", monospace;
+  background-color: #121212;
+  color: #e0e0e0;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+header {
+  background: #1f1f1f;
+  padding: 1em 2em;
+  border-bottom: 1px solid #333;
+}
+
+header .logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00bcd4;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, #1f1f1f, #2c2c2c);
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero h2 {
+  font-size: 2.5em;
+  color: #00bcd4;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 1.1em;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.btn {
+  background: #00bcd4;
+  color: #121212;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0097a7;
+}
+
+.btn-alt {
+  background: #333;
+  color: #e0e0e0;
+}
+
+
+.cards, .team, .projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card, .member, .project {
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 8px;
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s, border-color 0.3s;
+}
+
+.card:hover, .member:hover, .project:hover {
+  transform: scale(1.05);
+  border-color: #00bcd4;
+}
+
+.card h3, .member h3, .project h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.card p, .member p, .project p {
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+
+.member img, .project img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+
+.contact {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1f1f1f;
+  border: 1px solid #333;
+  border-radius: 8px;
+}
+
+.contact h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+.contact p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background: #121212;
+  color: #e0e0e0;
+  font-size: 1em;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background: #00bcd4;
+  color: #121212;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0097a7;
+}
+
+
+#lightbox {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+#lightbox.active {
+  display: flex;
+}
+
+#lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border: 2px solid #00bcd4;
+  border-radius: 8px;
+}
+
+
+footer {
+  background: #1f1f1f;
+  color: #ccc;
+  text-align: center;
+  padding: 1em;
+  border-top: 1px solid #333;
+}
+
+footer nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+footer nav ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  color: #00bcd4;
+}
+
+
+@media (max-width: 768px) {
+  .cards, .team, .projects {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
